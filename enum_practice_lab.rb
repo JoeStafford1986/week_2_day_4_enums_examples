@@ -41,6 +41,7 @@ pets = [
 # ## 1. Find the pet which breed is Husky
 
 found_pet = pets.find {|pet| pet[:breed] == "Husky"}
+
 p found_pet
 
 # ## 2. Make an array of all of the pets' names
@@ -55,7 +56,6 @@ pets.find do |pet|
   else
     p "found false"
   end
-
 end
 
 ## 4. Find the most expensive pet i.e. pet with the highest/maximum price
@@ -67,21 +67,26 @@ pets.each do |pet|
     current_pet = pet
   end
 end
+
 p current_pet
 
 ## 5. Find the total value (price) of all of the pets added together.
 
 sum = 0
+
 pets.each do |pet|
   sum += pet[:price]
 end
+
 p sum
 
 ## 6. Change each pet so their price is 50% cheaper
 
 pets_half_price = []
+
 pets.each do |pet|
-  pet[:price] = pet[:price]/ 2
+  pet[:price] = pet[:price] / 2
   pets_half_price << pet
 end
+
 p pets_half_price
