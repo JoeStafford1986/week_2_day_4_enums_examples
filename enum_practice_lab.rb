@@ -85,7 +85,7 @@ p sum
 pets_half_price = []
 
 pets.each do |pet|
-  pet[:price] = pet[:price] / 2
+  pet[:price] /= 2
   pets_half_price << pet
 end
 
